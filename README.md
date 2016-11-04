@@ -1,2 +1,7 @@
 # emg-plotter
-A simple Python script for plotting EMG against switch activation.
+A simple script for plotting EMG against switch activation. Written, for now, in Python.
+
+## Specification
+
+
+## To-do
