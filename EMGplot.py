@@ -30,6 +30,7 @@ def switchRead ():
 def main():
     reaction_data_aligned = []
     switch_timings = []
+    root = tkinter.Tk()
 
     while True:
         try:
@@ -40,12 +41,10 @@ def main():
         except IndexError:
             print("No switch trigger in the EMG file. Try again")
 
-    root = tkinter.Tk()
-    root.destroy()
     #WORK OUT HOW TO ITERATE THROUGH THIS...
 
     #reaction_data[:,1]
-
+    root.destroy()
 
     for row in reaction_data:
          if row[7] is not None:
@@ -63,7 +62,7 @@ def main():
         else:
             reaction_data_aligned.append([row[0],0])
 
-    pdb.set_trace()
+    #pdb.set_trace()
 
     switch_data = np.asarray(reaction_data_aligned,dtype=np.int32)
 
